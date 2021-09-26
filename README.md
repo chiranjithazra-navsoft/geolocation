@@ -1,5 +1,5 @@
 # geolocation
-django-admin startproject mymap
+django-admin startproject mymap.
 django-admin startapp markers
 Activating the ‘markers’ app
 sudo apt-get install gdal-bin
