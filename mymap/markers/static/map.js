@@ -48,6 +48,6 @@ return geojson
 }
 async function render_markers() {
 const markers = await load_markers()
-L.geoJSON(markers).bindPopup(layer => "<b>"+layer.feature.properties.name+"</b><br><p>"+layer.feature.properties.detailedForecast+"</p><br><b>Temprature:</b>"+layer.feature.properties.temperature+" "+layer.feature.properties.temperatureUnit).addTo(map)
+L.geoJSON(markers).bindPopup(layer => "<b>"+layer.feature.properties.name+"</b><br><p>"+layer.feature.properties.detailedForecast+"</p><br><b>Temprature:</b>"+layer.feature.properties.temperature+" "+layer.feature.properties.temperatureUnit).addTo(map).openPopup()
 }
 map.on('moveend', render_markers)
